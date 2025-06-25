@@ -1,5 +1,6 @@
 package dev.calebwolfe.project.wedding.weddingwebsite.controller;
 
+import dev.calebwolfe.project.wedding.weddingwebsite.PaginatedImageResponse.PaginatedImageResponse;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.http.HttpStatus;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -16,8 +18,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Logging
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 public class WeddingWebsiteController implements ApplicationListener<ContextRefreshedEvent> {
+
+    private final Logger logger = LoggerFactory.getLogger(WeddingWebsiteController.class);
 
     // --- Static Resources & Configuration ---
     private static final String GALLERY_IMAGE_RESOURCE_PATH_PATTERN = "classpath*:static/images/gallery/*.webp";
@@ -46,11 +54,11 @@ public class WeddingWebsiteController implements ApplicationListener<ContextRefr
                         .map(filename -> GALLERY_BROWSER_BASE_PATH + filename)
                         .collect(Collectors.toUnmodifiableList());
 
-                System.out.println("Gallery image URLs loaded: " + allImageRelativeUrls.size() + " images.");
+                logger.info("Gallery image URLs loaded: {} image", allImageRelativeUrls.size());
 
             } catch (IOException e) {
-                System.err.println("Error loading gallery images on startup: " + e.getMessage());
-                e.printStackTrace();
+                logger.error("Error loading image gallery on startup: {}", e.getMessage());
+                this.allImageRelativeUrls = Collections.emptyList();
             }
         }
     }
@@ -121,33 +129,4 @@ public class WeddingWebsiteController implements ApplicationListener<ContextRefr
         return new PaginatedImageResponse(pagedImageUrls, page, size, totalImages, totalPages);
     }
 
-    // --- Helper Class for JSON Response (No changes needed here) ---
-    public static class PaginatedImageResponse {
-        private List<String> images;
-        private int currentPage;
-        private int pageSize;
-        private long totalImages;
-        private int totalPages;
-        private String error;
-
-        public PaginatedImageResponse(List<String> images, int currentPage, int pageSize, long totalImages, int totalPages) {
-            this.images = images;
-            this.currentPage = currentPage;
-            this.pageSize = pageSize;
-            this.totalImages = totalImages;
-            this.totalPages = totalPages;
-        }
-
-        public PaginatedImageResponse(List<String> images, int currentPage, int pageSize, long totalImages, int totalPages, String error) {
-            this(images, currentPage, pageSize, totalImages, totalPages);
-            this.error = error;
-        }
-
-        public List<String> getImages() { return images; }
-        public int getCurrentPage() { return currentPage; }
-        public int getPageSize() { return pageSize; }
-        public long getTotalImages() { return totalImages; }
-        public int getTotalPages() { return totalPages; }
-        public String getError() { return error; }
-    }
 }
