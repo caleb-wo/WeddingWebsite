@@ -1,0 +1,62 @@
+#registry-section{
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+#amazon-part{
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    margin-right: 1em;
+    gap:1em;
+}
+
+#amazon-name{
+    text-align: right;
+    color: var(--brand-brown);
+    padding: 0;
+    margin: 0;
+}
+
+.tab{
+    height: 1px;
+    width: 4em;
+    border: solid 2px var(--brand-brown);
+    background-color: var(--brand-brown);
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+#registry-mini-title{
+    text-align: right;
+    font-family: var(--font-header);
+    margin: 0;
+    padding: 0;
+}
+
+#registry-link{
+    width: fit-content;
+    font-family: var(--font-content);
+    color: var(--brand-brown);
+    font-size: 35px;
+    text-decoration: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 3px;
+    border: solid 4px var(--brand-brown);
+    transition: all 0.4s ease-in-out;
+}
+
+#registry-link:hover{
+    background-color: var(--brand-brown);
+    color: var(--brand-sand);
+    scale: 1.1;
+}
+
+#amazon-logo{
+    margin-left: 1em;
+}

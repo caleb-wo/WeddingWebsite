@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caleb Wolfe">
+    <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
+    <link rel="stylesheet" th:href="@{/css/min/global.css}">
+    <link rel="stylesheet" th:href="@{/css/min/schedule.css}">
+    <title>Document</title>
+</head>
+<body id="idx-body">
+    <header th:replace="~{fragments/fragments :: siteHeader}"></header>
+    <h1 class="page-title" id="schedule-title">Wedding & Reception Schedule</h1>
+    <!-- <h2>Are you a member of Church of Jesus Christ of Latter-day Saints?</h2>
+    <div id="button-box">
+        <lable>Yes</lable><img class="yes-btn" src="/images/open_shell.jpeg">
+        <lable>No</lable><img class="no-btn" src="/images/closed_shell.jpeg">
+    </div> -->
+    <section class="day-schedule" id="friday">
+        <h2 class="day-title">Friday, August 1st</h2>
+        <div>
+            <h3 class="time-text">11:30am</h3>
+            <hr>
+            <p class="instructions">Arrive at the <strong>Los Angeles California Temple</strong>.</p>
+            <p class="instructions">For more details, see <a href="https://www.churchofjesuschrist.org/temples/details/los-angeles-california-temple?lang=eng" target="_blank" rel="noopener"><i>LA Temple Address and Related Information</i></a>.</p>
+            <h3 class="time-text">12:30pm</h3>
+            <hr>
+            <p class="instructions">Sealing Ceremony begins.</p>
+            <h3 class="time-text">1:00pm</h3>
+            <hr>
+            <p class="instructions">There are no real instructions here I just need to make fake content to see what things look like.</p>
+            <h3 class="time-text">3:00 - 7:45pm</h3>
+            <hr>
+            <p class="instructions">Caleb and Mary on their way home from dinner end up crashing into a truck that was hauling toxic waste. Luckily for them, they weren't killed, nor did they get cancer! Mary gained the ability to <strong>fly</strong>! She also can conjure <strong>fire</strong> at will! Additionally, on the way out of the crash, she saw a lottery ticket on the roadside and decided to scratch it... she won <strong>$75,000,000</strong>. Caleb gained the very cool and epic ability to sneeze 3 TIMES IN A ROW. He also contracted lupus and no longer has any hair on his body. He has also missplaced his wallet, please contact him if you have any valuable information regarding his wallet's whereabouts.</p>
+        </div>
+    </section>
+    <section class="day-schedule" id="saturday">
+        <h2 class="day-title">Saturday, August 2nd</h2>
+        <div>
+            <h3 class="time-text">11:30am</h3>
+            <hr>
+            <p class="instructions">Arrive at the <strong>Los Angeles California Temple</strong>. If you need directions, please click <a href="https://www.churchofjesuschrist.org/temples/details/los-angeles-california-temple?lang=eng" target="_blank" rel="noopener">here</a>.</p>
+            <h3 class="time-text">12:30pm</h3>
+            <hr>
+            <p class="instructions">Sealing Ceremony begins.</p>
+            <h3 class="time-text">1:00pm</h3>
+            <hr>
+            <p class="instructions">There are no real instructions here I just need to make fake content to see what things look like.</p>
+            <h3 class="time-text">3:00 - 7:45pm</h3>
+            <hr>
+            <p class="instructions">Caleb and Mary on their way home from dinner end up crashing into a truck that was hauling toxic waste. Luckily for them, they weren't killed, nor did they get cancer! Mary gained the ability to <strong>fly</strong>! She also can conjure <strong>fire</strong> at will! Additionally, on the way out of the crash, she saw a lottery ticket on the roadside and decided to scratch it... she won <strong>$75,000,000</strong>. Caleb gained the very cool and epic ability to sneeze 3 TIMES IN A ROW. He also contracted lupus and no longer has any hair on his body. He has also missplaced his wallet, please contact him if you have any valuable information regarding his wallet's whereabouts.</p>
+        </div>
+    </section>
+</body>
+</html>

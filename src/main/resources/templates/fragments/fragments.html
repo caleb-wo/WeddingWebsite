@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!-- header fragment -->
+<header th:fragment="siteHeader">
+    <h1>C + M</h1>
+    <div>
+        <nav>
+            <a th:href="@{/home}">Home</a>
+            <a th:href="@{/gallery}">Gallery</a>
+            <a th:href="@{/schedule}">Schedule</a>
+            <a th:href="@{/registry}">Registry</a>
+            <a th:href="@{/additional}">Additional Info</a>
+            <a th:href="@{/rsvp}">RSVP</a>
+        </nav>
+    </div>
+</header>
+
+<!-- footer fragment -->
+<footer th:fragment="siteFooter">
+</footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+#schedule-title{
+    margin: 0 auto;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* #button-box{
+    display: flex;
+    width: 50vw;
+    margin: 0 auto;
+    justify-content: space-around;
+} */
+
+/* .yes-btn,
+.no-btn{
+    max-width: 30px;
+} */
+
+.day-schedule{
+    display: flex;
+    flex-direction: column;
+    border: double 5px var(--brand-brown);
+    background-color: white;
+    color: var(--brand-brown);
+    width: 70vw;
+    margin: 3em auto;
+    padding: 2em;
+}
+
+#friday{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.day-title{
+    font-family: var(--font-header);
+    padding: 0;
+    margin: 0;
+}
+
+.time-text{
+    font-family: var(--font-header);
+    font-size: xx-large;
+    padding-left: 3em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.instructions{
+    font-family: var(font-content);
+    font-size: 1.25em;
+    text-align: center;
+    margin: 0 3em;
+}

@@ -1,0 +1,61 @@
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap");
+
+:root {
+  --brand-brown: #392B1B;
+  --brand-blue : #8CA7CC;
+  --brand-sand : #DECDB9;
+
+  --font-title: "Whisper", cursive;
+  --font-content: "Eczar", serif;
+  --font-header: "Caveat", cursive;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+/* Headers */
+header{
+    margin: 0;
+    padding-top: 1em;
+    background-color: var(--brand-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    color: white;
+    font-family: var(--font-title);
+    font-size: 4em;
+}
+
+nav{
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+nav a{
+    font-family: var(--font-header);
+    font-size: x-large;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav a:hover{
+    background-color: var(--brand-sand);
+}
+
+/* Classes */
+.page-title{
+    color: var(--brand-brown);
+}

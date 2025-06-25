@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caleb Wolfe">
+    <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
+    <link rel="stylesheet" th:href="@{/css/min/global.css}">
+    <link rel="stylesheet" th:href="@{/css/min/index.css}">
+    <title>Document</title>
+</head>
+<body id="idx-body">
+    <header th:replace="~{fragments/fragments :: siteHeader}"></header>
+    <section id="hero-section">
+        <div id="fast-details">
+            <p id="countdown"><span>??d ??h ??m ??s </span>until August 1st</p>
+            <h2 id="couple-title">Caleb & Mary</h2>
+            <section id="wedding-quick-info">
+                    <p>Friday, August 1st</p>
+                    <p>LA Temple</p>
+                    <p>Saturday, August 2nd</p>
+                    <p>Stake Center Address</p>
+            </section>
+        </div>
+    </section>
+    <article>
+        <h2>Our Story</h2>
+        <p>We met at BYU–Idaho when our apartments were put in a church group together. We started spending time together—usually at his place playing ping pong and pool. He thought I was beautiful and someone worth the effort. I thought he was funny, confident, and yes… very handsome. I was shy at first, but he made me feel safe and seen, and over time, we grew closer. He loved my smile and quiet strength, and I admired the way he carried himself and made everyone laugh, although we grew to love each other on a much deeper level later on. A couple of months later, he asked me out—and from that point on, we’ve been inseparable!</p>
+    </article>
+</body>
+</html>

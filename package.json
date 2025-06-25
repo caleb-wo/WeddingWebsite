@@ -1,0 +1,14 @@
+{
+  "name": "wedding-website",
+  "scripts": {
+    "build:css": "postcss src/main/resources/static/css/*.css -d src/main/resources/static/css/min"
+  },
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "viewerjs": "^1.11.7"
+  }
+}

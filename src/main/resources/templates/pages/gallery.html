@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caleb Wolfe">
+    <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
+    <link rel="stylesheet" th:href="@{/css/min/global.css}">
+    <link rel="stylesheet" th:href="@{/css/min/gallery.css}">
+    <link rel="stylesheet" th:href="@{/css/min/viewer.css}">
+    <script defer type="module" src="/js/gallery.mjs"></script>
+    <title>Gallery</title>
+</head>
+<body id="idx-body">
+    <header th:replace="~{fragments/fragments :: siteHeader}"></header>
+    <main>
+        <div id="gallery-pager" th:data-total-images="${totalGalleryImages}">
+            <h2 id="previousPgBtn" class="pg-button">&larr; Previous</h2>
+            <div id="pageNumberContainer" class="page-number-container">
+                <h1 id="currentPageNumber" class="page-number">1</h1>
+            </div>
+            <h2 id="nextPgBtn" class="pg-button">Next &rarr;</h2>
+        </div>
+        <div id="gallery">
+            <div class="image-container">
+              <img th:src="@{/images/gallery/image1.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image10.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image11.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image12.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image13.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image14.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image15.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image16.webp}" alt="Image of Caleb and Mary">
+              <img th:src="@{/images/gallery/image17.webp}" alt="Image of Caleb and Mary">
+            </div>
+        </div>
+        <div id="lightbox-overlay" class="hidden">
+            <div id="lightbox-content">
+                <span id="close-button">&times;</span>
+                <img src="" alt="Enlarged Image" id="lightbox-image">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
