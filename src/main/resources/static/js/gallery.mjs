@@ -106,15 +106,11 @@ async function loadImagesForPage(page) {
 function updatePager(newPage, isPrevious = false) {
     if(isPrevious){
         // Handle page number animation
-        // 1. Mark current number to slide out
+        // Mark current number to slide out
         currentPageNumberDisplay.classList.add('slide-out-right');
 
-        // 2. After current number starts sliding, prepare the new number
-        // We use a short setTimeout to allow the browser to register the 'slide-out-left' class
-        // and start its transition before we create the new element.
-
+        // After current number starts sliding, prepare the new number
         setTimeout(() => {
-            // Remove the old number (or its content)
             const parent = currentPageNumberDisplay.parentNode;
             if (parent){
                 parent.removeChild(currentPageNumberDisplay);
@@ -130,20 +126,14 @@ function updatePager(newPage, isPrevious = false) {
             pageNumberContainer.appendChild(newPageNumberDisplay);
 
             // Trigger the slide-in animation after a very small delay
-            // This is crucial to make the transition work, as it needs to transition
-            // from the 'slide-in-right' state to the 'slide-center' state.
             setTimeout(() => {
                 newPageNumberDisplay.classList.remove('slide-in-left');
                 newPageNumberDisplay.classList.add('slide-center'); // Move to center
-                // We will remove slide-center after the animation finishes
-                // to keep it clean, but for simple slides, it might not be strictly needed.
-                // However, if you plan to re-use the same element, it's good practice.
-            }, 10); // A very short delay (e.g., 10ms) is often enough for browsers to apply the initial state
+            }, 10);
 
             // Update current page variable
             currentPage = newPage;
             console.log(currentPage)
-            // currentPageNumberDisplay = document.getElementById('currentPageNumber'); // The h1 element
             currentPageNumberDisplay = newPageNumberDisplay;
 
             // Update button states
@@ -153,24 +143,15 @@ function updatePager(newPage, isPrevious = false) {
             nextPageBtn.style.opacity = (currentPage === maxPages) ? "0" : "1";
             nextPageBtn.style.userSelect = (currentPage === maxPages) ? "none" : "";
             nextPageBtn.style.pointerEvents = (currentPage === maxPages) ? "none" : "auto";
-        }, 300); // This delay should match the CSS transition duration (0.3s)
+        }, 300);
     } else {
-        // Handle page number animation
-        // 1. Mark current number to slide out
         currentPageNumberDisplay.classList.add('slide-out-left');
-
-        // 2. After current number starts sliding, prepare the new number
-        // We use a short setTimeout to allow the browser to register the 'slide-out-left' class
-        // and start its transition before we create the new element.
-
         setTimeout(() => {
             // Remove the old number (or its content)
             const parent = currentPageNumberDisplay.parentNode;
             if (parent){
                 parent.removeChild(currentPageNumberDisplay);
             }
-            // currentPageNumberDisplay.remove(); // Remove the old h1
-
             // Create a new h1 element for the new page number
             const newPageNumberDisplay = document.createElement('h1');
             newPageNumberDisplay.id = 'currentPageNumber';
@@ -180,15 +161,10 @@ function updatePager(newPage, isPrevious = false) {
             pageNumberContainer.appendChild(newPageNumberDisplay);
 
             // Trigger the slide-in animation after a very small delay
-            // This is crucial to make the transition work, as it needs to transition
-            // from the 'slide-in-right' state to the 'slide-center' state.
             setTimeout(() => {
                 newPageNumberDisplay.classList.remove('slide-in-right');
                 newPageNumberDisplay.classList.add('slide-center'); // Move to center
-                // We will remove slide-center after the animation finishes
-                // to keep it clean, but for simple slides, it might not be strictly needed.
-                // However, if you plan to re-use the same element, it's good practice.
-            }, 10); // A very short delay (e.g., 10ms) is often enough for browsers to apply the initial state
+            }, 10);
 
             // Update current page variable
             currentPage = newPage;

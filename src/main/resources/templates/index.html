@@ -7,13 +7,14 @@
     <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
     <link rel="stylesheet" th:href="@{/css/min/global.css}">
     <link rel="stylesheet" th:href="@{/css/min/index.css}">
+    <script defer type="module" src="/js/index.mjs"></script>
     <title>Document</title>
 </head>
 <body id="idx-body">
     <header th:replace="~{fragments/fragments :: siteHeader}"></header>
     <section id="hero-section">
         <div id="fast-details">
-            <p id="countdown"><span>??d ??h ??m ??s </span>until August 1st</p>
+            <p id="countdown"><span id="countdown-display">[Loading Countdown...] </span>until August 1st</p>
             <h2 id="couple-title">Caleb & Mary</h2>
             <section id="wedding-quick-info">
                     <p>Friday, August 1st</p>

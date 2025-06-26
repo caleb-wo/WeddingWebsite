@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caleb Wolfe">
+    <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
+    <link rel="stylesheet" th:href="@{/css/min/global.css}">
+    <link rel="stylesheet" th:href="@{/css/error.css}">
+    <title>Document</title>
+</head>
+<body id="err-body">
+<div class="error-container">
+    <div class="error-status" th:text="${status}">404</div>
+
+    <div class="error-phrase" th:text="${error}">Not Found</div>
+
+    <p class="error-details" th:text="${details}">We couldn't find the page you were looking for.</p>
+
+    <p class="error-path">
+        <strong>Path:</strong> <span th:text="${path}">/some/url</span>
+    </p>
+
+    <p class="error-timestamp">
+        <strong>Timestamp:</strong> <span th:text="${#temporals.format(timestamp, 'dd-MM-yyyy HH:mm:ss')}"></span>
+    </p>
+
+    <a th:href="@{/home}" class="home-link">Go to Homepage</a>
+</div>
+</body>
+</html>

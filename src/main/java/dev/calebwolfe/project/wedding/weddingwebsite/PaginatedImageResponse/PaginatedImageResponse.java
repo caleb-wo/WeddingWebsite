@@ -18,15 +18,9 @@ public class PaginatedImageResponse {
         this.totalPages = totalPages;
     }
 
-    public PaginatedImageResponse(List<String> images, int currentPage, int pageSize, long totalImages, int totalPages, String error) {
-        this(images, currentPage, pageSize, totalImages, totalPages);
-        this.error = error;
-    }
-
     public List<String> getImages() { return images; }
     public int getCurrentPage() { return currentPage; }
     public int getPageSize() { return pageSize; }
     public long getTotalImages() { return totalImages; }
     public int getTotalPages() { return totalPages; }
-    public String getError() { return error; }
 }
