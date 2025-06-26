@@ -107,17 +107,15 @@
             <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
-                <!-- Use the latest released version:
-            https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
-                    <version>1.15.1</version>
-                    <executions>
-                        <execution>
-                            <id>install node and npm</id>
-                            <goals><goal>install-node-and-npm</goal></goals>
-                            <configuration>
-                                <nodeVersion>v4.6.0</nodeVersion>
-                                <npmVersion>2.15.9</npmVersion>
-                            </configuration>
+                <version>1.15.1</version>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals><goal>install-node-and-npm</goal></goals>
+                        <configuration>
+                            <nodeVersion>v20.14.0</nodeVersion>
+                            <npmVersion>10.8.0</npmVersion>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>npm install</id>
