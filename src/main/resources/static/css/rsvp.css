@@ -1,11 +1,12 @@
 #rsvp-box{
     text-align: center;
     background-color: var(--brand-sand);
-    width: 60vw;
+    width: fit-content;
     margin: 3em auto;
     height: fit-content;
     border: solid 5px var(--brand-brown);
     border-style: double;
+    padding: 3em;
 }
 
 #rsvp-box h1{
