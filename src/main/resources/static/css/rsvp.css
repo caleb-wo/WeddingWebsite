@@ -1,0 +1,13 @@
+#rsvp-box{
+    text-align: center;
+    background-color: var(--brand-sand);
+    width: 60vw;
+    margin: 3em auto;
+    height: fit-content;
+    border: solid 5px var(--brand-brown);
+    border-style: double;
+}
+
+#rsvp-box h1{
+    color: var(--brand-brown);
+}

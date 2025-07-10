@@ -6,10 +6,13 @@
     <meta name="author" content="Caleb Wolfe">
     <meta name="description" content="The wedding website made by Caleb, for him and his fiancé, Mary. It has important wedding information and includes scheduling, dates, and other important information.">
     <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/rsvp.css}">
     <title>RSVP</title>
 </head>
 <body id="idx-body">
     <header th:replace="~{fragments/fragments :: siteHeader}"></header>
-    <h1>Please RSVP <a href="https://docs.google.com/forms/d/e/1FAIpQLScGX9Jp8t4VcyH96pZ0jix0NaBvJIL2QAp0Qydf2maaSSjKQw/viewform?usp=dialog">HERE</a>!</h1>
+    <section id="rsvp-box">
+        <h1>Please RSVP <a href="https://docs.google.com/forms/d/e/1FAIpQLScGX9Jp8t4VcyH96pZ0jix0NaBvJIL2QAp0Qydf2maaSSjKQw/viewform?usp=dialog" target="_blank">HERE</a>!</h1>
+    </section>
 </body>
 </html>
