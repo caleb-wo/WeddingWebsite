@@ -59,5 +59,10 @@
 
 #amazon-logo{
     margin-left: 1em;
-    max-width: 45vw;
+}
+
+@media screen and (max-width: 767px){
+    #amazon-logo{
+        max-width: 45vw;
+    }
 }
