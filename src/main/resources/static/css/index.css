@@ -94,3 +94,54 @@ article p{
     font-size: x-large;
     line-height: 5vh;
 }
+
+@media screen and (max-width: 767px) {
+    #hero-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background_image2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #hero-section {
+        height: fit-content;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background_image2.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #hero-section::after {
+        height: 60px;
+        margin-top: 4em;
+        background: linear-gradient(to bottom, transparent, var(--brand-brown));
+    }
+
+    #fast-details {
+        color: var(--brand-sand);
+        width: 70vw;
+        margin: 0 auto;
+        margin-bottom: 4em;
+    }
+
+    #wedding-quick-info {
+        color: var(--brand-brown);
+    }
+
+    #couple-title{
+        color: var(--brand-sand);
+    }
+
+    article {
+        padding-top: 50px;
+        background-color: white;
+        width: 90vw;
+        border: double 5px var(--brand-sand);
+    }
+
+    article p {
+        width: 80vw;
+    }
+
+    #idx-body{
+        background-color: var(--brand-brown);
+    }
+}
