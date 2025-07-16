@@ -97,20 +97,13 @@ article p{
 
 @media screen and (max-width: 767px) {
     main{
-        width: fit-content;
+        max-width: 100vw;
     }
     #hero-section {
-        width: 100vw;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background_image2.webp");
         background-position: center;
         background-repeat: no-repeat;
-    }
-
-    #hero-section {
         height: fit-content;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/background_image2.webp");
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     #hero-section::after {
@@ -141,7 +134,7 @@ article p{
         width: 90vw;
         border: double 5px var(--brand-sand);
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     article p {
@@ -151,6 +144,5 @@ article p{
 
     #idx-body{
         background-color: var(--brand-brown);
-        width: fit-content;
     }
 }
