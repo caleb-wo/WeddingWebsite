@@ -73,12 +73,11 @@ article {
     font-family: var(--font-content);
     border: double 5px var(--brand-brown);
     color: var(--brand-brown);
-    padding-top: 50px;
+    padding: 50px 0;
     background-color: white;
     width: 70vw;
     height: fit-content;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 100px auto;
 }
 
 h2{
@@ -141,6 +140,7 @@ article p{
         background-color: white;
         width: 90vw;
         border: double 5px var(--brand-sand);
+        margin: 0 auto;
         margin-bottom: 50px;
     }
 
