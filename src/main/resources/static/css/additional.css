@@ -4,18 +4,6 @@
     text-align: center;
 }
 
-/* #button-box{
-    display: flex;
-    width: 50vw;
-    margin: 0 auto;
-    justify-content: space-around;
-} */
-
-/* .yes-btn,
-.no-btn{
-    max-width: 30px;
-} */
-
 .day-schedule{
     display: flex;
     flex-direction: column;
@@ -25,11 +13,6 @@
     width: 70vw;
     margin: 3em auto;
     padding: 2em;
-}
-
-#friday{
-    margin-top: 0;
-    padding-top: 0;
 }
 
 .day-title{
