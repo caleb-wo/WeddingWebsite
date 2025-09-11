@@ -4,7 +4,7 @@ This site was used during June, July, & August of 2025. I got married in August 
 
 ## Design
 
-It is a Spring Framework full stack application. In the project, I also have a collection of WebP photos from my engangement pictures. The frontend makes a call to the backend & gets the images needed as the user goes through each page. I utilized Heroku to host the site. On our wedding invites we included a QR code that pointed to the heroku web address. We also used a custom TinyUrl—_tinyurl.com/mrxmrswolfe_—instead of purchasing a domain name as a more accesible option for those who could use the QR code. 
+It is a Spring Framework full stack application. In the project, I also have a collection of WebP photos from my engangement pictures. The frontend makes a call to the backend & gets the images needed as the user goes through each page. I utilized Heroku to host the site. On our wedding invites we included a QR code that pointed to the heroku web address. We also used a custom TinyUrl—_tinyurl.com/mrxmrswolfe_—instead of purchasing a domain name as a more accesible option for those who could not use the QR code. 
 
 ## Tools
 
