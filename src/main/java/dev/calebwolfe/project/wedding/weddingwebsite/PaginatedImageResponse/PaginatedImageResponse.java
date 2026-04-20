@@ -1,7 +1,6 @@
 package dev.calebwolfe.project.wedding.weddingwebsite.PaginatedImageResponse;
 import java.util.List;
 
-// --- Helper Class for JSON Response (No changes needed here) ---
 public class PaginatedImageResponse {
     private List<String> images;
     private int currentPage;
